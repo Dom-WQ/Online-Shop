@@ -1,0 +1,37 @@
+server:
+  port: 9101
+
+spring:
+
+  cloud:   #zookeeper  替代eureka
+    zookeeper:
+      connect-string: 10.0.0.133:2181,10.0.0.133:2182,10.0.0.133:2183
+      discovery:
+        enabled: true
+        register: true
+
+  application:
+    name: mafeng-user  #给eureka用
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.0.0.133:3306/mafeng_users?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=true
+    #url: jdbc:mysql://10.0.0.133:3306/mafeng_shop?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=true
+    username: root
+    password: admin
+
+
+# MyBatisPlus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true # 驼峰命名
+
+
+
+
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://dom:admin@localhost:8761/myeureka/eureka
+#      #defaultZone: http://dom:admin@localhost:8761/myeureka/eureka,http://dom:admin@localhost:8762/myeureka/eureka,http://dom:admin@localhost:8763/myeureka/eureka
+#
