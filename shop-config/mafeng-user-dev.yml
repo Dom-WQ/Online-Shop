@@ -19,6 +19,14 @@ spring:
     username: root
     password: admin
 
+  rabbitmq:   #Rabbit MQ
+    host: 192.168.66.133
+    port: 5672
+    username: guest
+    password: guest
+
+    
+
 
 # MyBatisPlus配置
 mybatis-plus:
