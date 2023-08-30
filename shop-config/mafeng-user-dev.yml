@@ -20,7 +20,7 @@ spring:
     password: admin
 
   rabbitmq:   #Rabbit MQ
-    host: 192.168.66.133
+    host: 10.0.0.133
     port: 5672
     username: guest
     password: guest
