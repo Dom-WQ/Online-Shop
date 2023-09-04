@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: product-view-service-feign
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  zipkin:
+    base-url: http://localhost:9500
+
+server:
+  port: 10010
